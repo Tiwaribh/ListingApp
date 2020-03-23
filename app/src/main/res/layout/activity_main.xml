@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+        <RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/searchView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:queryHint="@string/hint" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvItems"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/searchView"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="50"
+                tools:listitem="@layout/layout_row_item" />
+
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_above="@+id/btnRetry"
+                style="@style/TextAppearance.AppCompat.Medium"
+                android:layout_marginBottom="@dimen/d_5dp"
+                android:text="@string/no_data_found" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRetry"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:paddingLeft="@dimen/d_5dp"
+                android:paddingRight="@dimen/d_5dp"
+                android:layout_marginTop="@dimen/d_5dp"
+                android:textColor="@android:color/white"
+                android:background="@color/colorPrimary"
+                android:layout_centerHorizontal="true"
+                android:text="@string/retry"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+        </RelativeLayout>

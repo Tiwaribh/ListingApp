@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/d_5dp"
+    app:contentPadding="@dimen/d_5dp"
+    app:cardCornerRadius="@dimen/d_5dp"
+    app:cardUseCompatPadding="true"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+         android:fontFamily="sans-serif-medium"
+        style="@style/TextAppearance.AppCompat.Medium"
+          />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/by"
+        android:layout_width="wrap_content"
+            android:textStyle="bold"
+        android:layout_height="wrap_content"
+        />
+        <TextView
+        android:id="@+id/tvBy"
+            android:layout_marginLeft="@dimen/d_5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textStyle="bold"
+            android:text="@string/backers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/tvNumberOfBakers"
+            android:layout_marginLeft="@dimen/d_5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>
+</androidx.cardview.widget.CardView>
